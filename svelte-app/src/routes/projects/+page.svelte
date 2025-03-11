@@ -68,7 +68,7 @@
     /* Scoped styles for webdev section */
     .projects-portfolio {
       padding: 2rem;
-      max-width: 1200px;
+      max-width: 75%;
       margin: 0 auto;
     }
   
@@ -173,7 +173,7 @@
     }
   
     @media (max-width: 480px) {
-      .webdev-portfolio {
+      .projects-portfolio {
         padding: 1rem;
       }
   
