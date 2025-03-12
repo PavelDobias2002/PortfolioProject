@@ -1,31 +1,31 @@
 <section class="homepage-portfolio">
 
     <div class="section-header">
-        <h1>Homepage</h1>
+        
         <div class="image">
-            <img src="svelte-app\src\routes\logo.png" alt="Logo" />
+            <img src="/logo.png" alt="Logo" />
         </div>
-        <p></p>
+        
       </div>
 
     <div class="grid">
         <div class="card">
             <div class="image">
-                <img src="svelte-app\src\routes\logo.png" alt="Logo" />
+                <img src="/head.png" alt="Logo" />
                 <a href="/projects">Projects</a>
             </div>
         </div>
 
         <div class="card">
             <div class="image">
-                <img src="svelte-app\src\routes\logo.png" alt="Logo" />
+                <img src="/head.png" alt="Logo" />
                 <a href="/design">Design</a>
             </div>
         </div>
 
         <div class="card">
             <div class="image">
-                <img src="svelte-app\src\routes\logo.png" alt="Logo" />
+                <img src="/head.png" alt="Logo" />
                 <a href="/artwork">Art</a>
             </div>
         </div>
@@ -76,8 +76,8 @@
     }
 
     .image{
-    max-height: 1em;
-      background-color: #dddddd;
+    max-height: 20em;
+      background-color: #000000;
       display: flex;
       align-items: center;
       justify-content: center;
