@@ -34,11 +34,6 @@
 * {
   box-sizing: border-box;
 }
-
-.homepage{
-        text-align: left;
-    }
-
     
     main {
         padding: 2rem;
@@ -55,4 +50,5 @@
       color: #546e7a;
       font-size: 1.2rem;
     }
+    
 </style>
