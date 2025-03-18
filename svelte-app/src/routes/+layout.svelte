@@ -1,6 +1,6 @@
 <script>
     // Import components
-    
+    import { Header, Navigation, Footer, Card } from "$lib";
 </script>
 
 
@@ -8,21 +8,7 @@
 <link rel="stylesheet" href="/styles/global.css" />
 
 <!-- Header -->
-<header>
-    
-
-    <nav>
-        <ul>
-            <li><a href="https://github.com/PavelDobias2002"><img src="/cvredbrightsmaller.png" alt="CVicon" /></a></li>
-            <li><a href="https://github.com/PavelDobias2002"><img src="/gitredbrightsmall.png" alt="GitHubIcon" /></a></li>
-            <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://ie.linkedin.com/in/pavel-dobias-789060292&ved=2ahUKEwjy_8-tl4KMAxWHUUEAHQNCAtoQFnoECBYQAQ&usg=AOvVaw06-nsywOiiTPqT1gHErbOe"><img src="/linkedinredbrightsmall.png" alt="LinkedInIcon" /></a></li>
-        </ul>
-        <ul class="homepage">
-            <li><a href="/"> Home </a></li>
-        </ul>
-    </nav>
-
-</header>
+<Header />
 
 <!-- Page Content -->
 <main>
@@ -30,18 +16,10 @@
 </main>
 
 <!-- Footer -->
-<footer>
-    <p>&copy; 2025 My Svelte App. All rights reserved.</p>
-</footer>
+<Footer />
 
 
 <style>
-    
-    header {
-        background-color: #000000;
-        padding: 1rem;
-        text-align: right;
-    }
     
     @font-face {
     font-family: 'Pixelify Sans';
@@ -57,45 +35,16 @@
   box-sizing: border-box;
 }
 
-
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: right;
-    }
-
-    .homepage{
+.homepage{
         text-align: left;
     }
-    
-    nav ul li {
-        margin: 0 15px;
-    }
-    
-    nav ul li a {
-        font-family: 'Pixelify Sans';
-        font-size: large;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-    }
+
     
     main {
         padding: 2rem;
         text-align: center;
     }
     
-    footer {
-        background-color: #343a40;
-        color: white;
-        text-align: center;
-        padding: 1rem;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
 
     .image{
     height: 15em;
