@@ -19,7 +19,7 @@
 <style>
     .card
     {
-        background: white;
+        background: rgb(0, 0, 0);
         border-radius: 10px; /* Rounded corners */
         border: 2px solid #660000;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
