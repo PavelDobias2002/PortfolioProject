@@ -5,9 +5,7 @@
 
 <header>
     <!-- Logo -->
-    <a class = "logo" href="/">
-        <img src = "/logo.png" alt = "Website Logo">
-    </a>
+
 
     <!-- Navigation -->
     <Navigation />
@@ -20,6 +18,7 @@
         justify-content: space-between;
         background-color: var(--primary-color);
         padding: 1rem;
+        
     }
 
     .logo {
