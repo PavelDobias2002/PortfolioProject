@@ -20,7 +20,7 @@
     <div class="design-item">
       <div class="image-placeholder">
         <p>Head</p>
-        <img src="/design/head.png" alt="Design 1" />
+        <img src="/head.png" alt="Design 1" />
       </div>
       <div class="overlay">
         <h3>Design Project</h3>
