@@ -13,12 +13,18 @@
       <img src="/logoSimple.png" alt="Logo" />
   </div>
 
-  <h1>Welcome to my piece of the internet</h1>
-  <p>My name is Pavel Dobias, I am an aspiring artist and designer etc.</p>
+  <h1>Welcome to my portfolio gallery</h1>
+  <p>My name is Pavel Dobias, I am an artist, designer, game designer/developer and much more.<br> To learn more check out my <b>contacts:</b></p>
   
 </div>
 
-<!-- Gallery -->
+<ul>
+  <li><a href="https://github.com/PavelDobias2002"><img src="/cvredbrightsmaller.png" alt="CVicon" /></a></li>
+  <li><a href="https://github.com/PavelDobias2002"><img src="/gitredbrightsmall.png" alt="GitHubIcon" /></a></li>
+  <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://ie.linkedin.com/in/pavel-dobias-789060292&ved=2ahUKEwjy_8-tl4KMAxWHUUEAHQNCAtoQFnoECBYQAQ&usg=AOvVaw06-nsywOiiTPqT1gHErbOe"><img src="/linkedinredbrightsmall.png" alt="LinkedInIcon" /></a></li>
+</ul>
+
+<!-- Gallery 
 <div class = "gallery">
   <a href = "/projects">
     <Card title = "Projects" description = "This is the first card." />
@@ -30,12 +36,13 @@
     <Card title = "Art" description = "This is the first card." />
   </a>
 </div>
-
+-->
 <style>
 
   .section-header{
         text-align: center;
         margin-bottom: 2rem;
+        margin-top: 2rem;
     }
 
     .section-header h1 {
@@ -63,6 +70,25 @@
     transform: translateY(-10px);
   }
 
+  ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul li {
+        margin: 0 15px;
+        transition: transform 0.3s ease;
+    }
+    
+
+    ul li:hover{
+      transform: translateY(-10px);
+    }
+
   .gallery /* Flexbox for Dynamic Layout */
   {
     display: flex;
@@ -71,7 +97,5 @@
     justify-content: center;
     margin-top: 2rem;
   }
-
-    
 
 </style>

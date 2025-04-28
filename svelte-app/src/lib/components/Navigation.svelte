@@ -1,3 +1,11 @@
+<nav class="nav">
+    <ul>
+        <li><a href="/" data-text="Home">Home</a></li>
+        <li><a href="/" data-text="Gallery">Gallery</a></li>
+        <li><a href="/" data-text="Contacts">Contacts</a></li>
+    </ul>
+</nav>
+
 <!--
 <nav class="nav">
 
@@ -14,20 +22,12 @@
     </ul>
     
 </nav>
-
+-->
 <style>
 
     .nav {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        border-radius: 25px;
         width: 100%;
-        height: 5rem;
-        border: 5px solid var(--primary-color);
-        border-radius: 25px;
-        
     }
 
 
@@ -49,8 +49,6 @@
         padding: 0;
         margin: 0;
         display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     nav ul li {
@@ -58,11 +56,11 @@
     }
     
     nav ul li a {
-        font-size: large;
-        text-decoration: none;
+        font-family: 'Special Gothic', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-style: bold;
         color: white;
-        font-weight: bold;
     }
 
 </style>
--->
