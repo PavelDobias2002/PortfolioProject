@@ -43,15 +43,18 @@
 
     .content h2 /*specific styling for headings*/
     {
-        font-size: 1.2rem;
+        font-family: 'Special Gothic Expanded One', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
         margin-bottom: 0.5rem;
-        color: #660000;
     }
 
     .content p /*specific styling for paragraphs*/
     {
+        font-family: 'Special Gothic', sans-serif;
         font-size: 1rem;
-        color: #ffffff;
+        font-weight: 400;
+        color: white;
     }
 
     .content h2::before /*pseudo-element: adds a thin underline before the card title*/

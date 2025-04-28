@@ -20,17 +20,6 @@
 
 
 <style>
-    
-    @font-face {
-    font-family: 'Pixelify Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-    src: url(https://design.penpot.app/assets/by-id/69c8f311-224c-4f5f-bd76-3927ee1f3017) format('woff');
-  }
-
-
-
 * {
   box-sizing: border-box;
 }
@@ -51,4 +40,29 @@
       font-size: 1.2rem;
     }
     
+    @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  :global(body) {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, 
+        #bdbdbd, /* Beige/cream color at top (brightest) */
+        #8f8f8f, /* Light parchment */
+        #3a3a3a, /* Tan/light sepia */
+    );
+    background-size: 200% 200%;
+    animation: gradientAnimation 30s ease-in-out infinite;
+    color: #000000;
+  }
+
 </style>

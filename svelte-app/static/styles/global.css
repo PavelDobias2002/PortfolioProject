@@ -5,20 +5,21 @@
    :root {
     /* Color Variables */
     --primary-color: #660000;
-    --background-color: #000000;
-    --text-color: #e7e7e7;
+    --background-color: #F0EAD6;
+    --text-color: #1a1a1a;
     --link-hover-color: #cf0011;
 
     /* Font Variables */
-    
-    --font-family: 'Pixelify Sans', sans-serif;
+
+    --font-family: 'Special Gothic Expanded One', sans-serif;
     --font-optical-sizing: auto;
     --font-weight: <weight>;
     --font-style: normal;
-      
-    --font-family: 'Arial', sans-serif;
-    --font-size-base: 16px;
-    --line-height-base: 1.6;
+
+    --font-family: 'Special Gothic', sans-serif;
+    --font-optical-sizing: auto;
+    --font-weight: <weight>;
+    --font-style: normal;
 
     /* Spacing Variables */
     --spacing-small: 10px;
