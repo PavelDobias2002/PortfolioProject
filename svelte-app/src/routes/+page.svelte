@@ -1,15 +1,86 @@
 <script>
   import { onMount } from 'svelte';
   import { Card } from '$lib';
+  import { scale } from 'svelte/transition';
 
   onMount(() => {
     console.log("Home Page Loaded");
   });
+
+  // import base to prefix local paths
+  import { base } from '$app/paths';
+
+  let showGallery = false;
+
+  // Update showGallery based on scroll position
+  const handleScroll = () => {
+    showGallery = window.scrollY > 50;
+  };
+
+  // Add scroll event listener
+  onMount(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
+  let allItems = [
+    {
+      id: 1,
+      image: `${base}/head.png`,
+      title: 'Head',
+      content: 'This is Head created in Krita',
+      software: 'Krita',
+      style: 'digital art',
+      date: 'X',
+    },
+    {
+      id: 2,
+      image: `${base}/dog.jpg`,
+      title: 'Dog',
+      content: 'What the dog doin Lorem Ipsum papipirum inomine e patri',
+      software: 'None',
+      style: 'Photograph',
+      date: '29/04/2025'
+    },
+    {
+      id: 3,
+      image: `${base}/bluestripes.png`,
+      title: 'Logo',
+      content: 'These are my logos',
+      software: 'Photoshop',
+      style: 'digital art',
+      date: 'X'
+    },
+    {
+      id: 4,
+      image: `${base}/logo.png`,
+      title: 'Head',
+      content: 'This is Head created in Krita',
+      software: 'Krita',
+      style: 'digital art',
+      date: 'X'
+    }
+    ,
+    {
+      id: 5,
+      image: `${base}/pavel-dobias-spritesheet-sleepingwiththefishes.jpg`,
+      title: 'Head',
+      content: 'This is Head created in Krita',
+      software: 'Krita',
+      style: 'digital art',
+      date: 'X'
+    }
+  ];
+
+  let items = [...allItems];
+
 </script>
 
 <div class="section-header">
         
-  <div class="image">
+  <div class="logo">
       <img src="/logoSimple.png" alt="Logo" />
   </div>
 
@@ -24,20 +95,53 @@
   <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://ie.linkedin.com/in/pavel-dobias-789060292&ved=2ahUKEwjy_8-tl4KMAxWHUUEAHQNCAtoQFnoECBYQAQ&usg=AOvVaw06-nsywOiiTPqT1gHErbOe"><img src="/linkedinredbrightsmall.png" alt="LinkedInIcon" /></a></li>
 </ul>
 
-<!-- Gallery 
-<div class = "gallery">
-  <a href = "/projects">
-    <Card title = "Projects" description = "This is the first card." />
-  </a>
-  <a href = "/design">
-    <Card title = "Design" description = "This is the first card." />
-  </a>
-  <a href = "/artwork">
-    <Card title = "Art" description = "This is the first card." />
-  </a>
+<!-- Scroll indicator arrow -->
+<div class="scroll-arrow-container">
+  <div class="scroll-arrow">
+    <span>Scroll Down</span>
+    ↓
+  </div>
 </div>
--->
+
+
+{#if showGallery}
+<div class="reveal">
+<div class="gallery">
+
+  {#each items as item (item.id)}
+    <div class="specific-item">
+
+      <div class="image">
+        <img src={item.image} alt = "image">
+      </div>
+
+      <div class="content">
+        <h3 class="item-heading">{item.title}</h3>
+        <p>
+          {item.content}
+        </p>
+      </div>
+
+      <div class="info">
+        <p>Software:{item.software}</p>
+        <p>Style:{item.style}</p>
+        <p>Date:{item.date}</p>
+      </div>
+
+    </div>
+  {/each}
+
+</div>
+</div>
+{/if}
+
 <style>
+
+  /* Ensure the body or main container has enough height */
+  :global(body) {
+    min-height: 200vh; /* Makes the page twice the height of the viewport */
+    margin: 0;
+  }
 
   .section-header{
         text-align: center;
@@ -57,16 +161,16 @@
       font-size: 1.5rem;
     }
 
-    .image {
+    .logo {
     display: inline-block;
     margin-bottom: 1rem;
   }
   
-  .image img {
+  .logo img {
     transition: transform 0.3s ease;
   }
   
-  .image img:hover {
+  .logo img:hover {
     transform: translateY(-10px);
   }
 
@@ -86,16 +190,100 @@
     
 
     ul li:hover{
-      transform: translateY(-10px);
+      transform: translateY(-5px);
     }
+
+    .reveal 
+{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealContent 1s forwards ease-out;
+}
+@keyframes revealContent
+{
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
   .gallery /* Flexbox for Dynamic Layout */
   {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+  
+    gap: 1.5rem;
     justify-content: center;
     margin-top: 2rem;
+    
   }
+
+  .specific-item
+{ /*grid system for the news articles*/
+    display: grid;
+    grid-template-columns: 2fr;
+    gap: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    
+}
+
+
+.image img{
+    display: inline-block;
+    border: 2px solid rgba(62, 62, 62, 0.3);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    max-width: 50rem;
+    margin: 1rem 1rem 0 1rem;
+  }
+.content h3{
+  font-family: 'Special Gothic Expanded One', sans-serif;
+  font-size: 2.5rem;
+}
+
+.content{
+  text-align: left;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.info{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 3.5rem;
+  border-top: 2px solid rgba(62, 62, 62, 0.3);
+  padding: 1rem;
+}
+
+
+
+  /* Scroll arrow styles */
+  .scroll-arrow-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 12.5rem;
+    width: 100%;
+  }
+  
+  .scroll-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-color, #ff3e00);
+  }
+  
+  .scroll-arrow span {
+    margin-bottom: 0.5rem;
+    font-family: 'Special Gothic', sans-serif;
+  }
+  
 
 </style>
