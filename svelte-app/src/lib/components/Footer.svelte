@@ -1,12 +1,13 @@
 <footer>
-    <p>&copy; 2025 My Svelte App. All rights reserved.</p>
+    <p>&copy; 2025 My Svelte App. All rights reserved. Pavel Dobias Portfolio</p>
 </footer>
 
 
 <style>
     footer {
-        background-color: #343a40;
+        background-color: var(--secondary-color);
         color: white;
+        font-family: var(--font-family-paragraph);
         text-align: center;
         padding: 1rem;
         position: fixed;

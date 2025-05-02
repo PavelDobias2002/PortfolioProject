@@ -4,7 +4,8 @@
 
    :root {
     /* Color Variables */
-    --primary-color: #660000;
+    --primary-color: #660000ff;
+    --secondary-color: #000000ff;
     --background-color: #F0EAD6;
     --text-color: #1a1a1a;
     --link-hover-color: #cf0011;
@@ -14,12 +15,12 @@
 
     /* Font Variables */
 
-    --font-family: 'Special Gothic Expanded One', sans-serif;
-    --font-optical-sizing: auto;
-    --font-weight: <weight>;
-    --font-style: normal;
+    --font-family-heading: 'Special Gothic Expanded One', sans-serif;
+    --font-optical-sizing-heading: auto;
+    --font-weight-heading: <weight>;
+    --font-style-heading: normal;
 
-    --font-family: 'Special Gothic', sans-serif;
+    --font-family-paragraph: 'Special Gothic', sans-serif;
     --font-optical-sizing: auto;
     --font-weight: <weight>;
     --font-style: normal;

@@ -11,6 +11,7 @@
   import { base } from '$app/paths';
 
   let showGallery = false;
+  let activeCategory = 'All'; // Track the active category
 
   // Update showGallery based on scroll position
   const handleScroll = () => {
@@ -32,7 +33,7 @@
       title: 'Head',
       content: 'This is Head created in Krita',
       software: 'Krita',
-      style: 'digital art',
+      style: 'Digital Art',
       date: 'X',
     },
     {
@@ -41,7 +42,7 @@
       title: 'Dog',
       content: 'What the dog doin Lorem Ipsum papipirum inomine e patri',
       software: 'None',
-      style: 'Photograph',
+      style: 'Game Design',
       date: '29/04/2025'
     },
     {
@@ -76,12 +77,26 @@
 
   let items = [...allItems];
 
+  // Function to handle category filter selection
+  function filterByCategory(style) {
+    activeCategory = style;
+    
+    if (style === 'All') {
+      items = [...allItems]; // Show all items
+    } else {
+      // Filter items based on style (case-insensitive comparison)
+      items = allItems.filter(item => 
+        item.style.toLowerCase() === style.toLowerCase()
+      );
+    }
+  }
+
 </script>
 
 <div class="section-header">
         
   <div class="logo">
-      <img src="/logoSimple.png" alt="Logo" />
+      <img src="/logoRed-Black.png" alt="Logo" />
   </div>
 
   <h1>Welcome to my portfolio gallery</h1>
@@ -103,10 +118,37 @@
   </div>
 </div>
 
+<!-- Category filters -->
+<div class="reveal">
+<div class="category-filters">
+  <button 
+    class={activeCategory === 'All' ? 'active' : ''} 
+    on:click={() => filterByCategory('All')}
+  >All</button>
+  <button 
+    class={activeCategory === 'Digital Art' ? 'active' : ''} 
+    on:click={() => filterByCategory('Digital Art')}
+  >Digital Art</button>
+  <button 
+    class={activeCategory === 'Traditional Art' ? 'active' : ''} 
+    on:click={() => filterByCategory('Traditional Art')}
+  >Traditional Art</button>
+  <button 
+    class={activeCategory === 'Game Design' ? 'active' : ''} 
+    on:click={() => filterByCategory('Game Design')}
+  >Game Design</button>
+</div>
+</div>
 
 {#if showGallery}
 <div class="reveal">
 <div class="gallery">
+
+  {#if items.length === 0}
+    <div class="no-items-message">
+      <p>No items found in the "{activeCategory}" category.</p>
+    </div>
+  {/if}
 
   {#each items as item (item.id)}
     <div class="specific-item">
@@ -123,9 +165,9 @@
       </div>
 
       <div class="info">
-        <p>Software:{item.software}</p>
-        <p>Style:{item.style}</p>
-        <p>Date:{item.date}</p>
+        <p><b>Software:</b> {item.software}</p>
+        <p><b>Style:</b> {item.style}</p>
+        <p><b>Date:</b> {item.date}</p>
       </div>
 
     </div>
@@ -150,14 +192,14 @@
     }
 
     .section-header h1 {
-      font-family: 'Special Gothic Expanded One', sans-serif;
+      font-family: var(--font-family-heading);
       font-size: 2.5rem;
       font-weight: 400;
       margin-bottom: 0.5rem;
     }
   
     .section-header p {
-      font-family: 'Special Gothic', sans-serif;
+      font-family: var(--font-family-paragraph);
       font-size: 1.5rem;
     }
 
@@ -211,6 +253,48 @@
     }
 }
 
+.category-filters 
+    {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .category-filters button {
+  background: none;
+  border: 1px solid #505050;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-family-heading);
+}
+
+.category-filters button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--background-color);
+}
+
+/* Active button styles */
+.category-filters button.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+  .no-items-message {
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+  font-family: var(--font-family-paragraph);
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
   .gallery /* Flexbox for Dynamic Layout */
   {
     display: flex;
@@ -243,11 +327,12 @@
     margin: 1rem 1rem 0 1rem;
   }
 .content h3{
-  font-family: 'Special Gothic Expanded One', sans-serif;
+  font-family: var(--font-family-heading);
   font-size: 2.5rem;
 }
 
 .content{
+  font-family: var(--font-family-paragraph);
   text-align: left;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -260,6 +345,7 @@
   gap: 3.5rem;
   border-top: 2px solid rgba(62, 62, 62, 0.3);
   padding: 1rem;
+  font-family: var(--font-family-paragraph);
 }
 
 
@@ -277,12 +363,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--primary-color, #ff3e00);
+    font-size: 1.5rem;
+    color: var(--primary-color);
   }
   
   .scroll-arrow span {
     margin-bottom: 0.5rem;
-    font-family: 'Special Gothic', sans-serif;
+    font-family: var(--font-family-paragraph);
   }
   
 

@@ -56,7 +56,7 @@
     }
     
     nav ul li a {
-        font-family: 'Special Gothic', sans-serif;
+        font-family: var(--font-family-paragraph);
         font-size: 1.5rem;
         font-weight: 400;
         font-style: bold;
