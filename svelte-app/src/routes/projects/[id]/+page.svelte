@@ -2,6 +2,7 @@
   import { page } from '$app/stores';
   import { allItems } from '$lib/data/galleryData.js';
   import { fade } from 'svelte/transition';
+  import { base } from '$app/paths';
   
   // Get the ID from the URL parameter
   $: id = $page.params.id;
@@ -44,7 +45,7 @@
           <img 
             transition:fade={{ duration: 300 }}
             class="carousel-image" 
-            src={images[currentImageIndex]} 
+            src="{base}{images[currentImageIndex]}"
             alt={`${item.title} - Image ${currentImageIndex + 1}`} 
           />
           
@@ -79,7 +80,7 @@
       <p><b>Date:</b> {item.date}</p>
     {/if}
     {#if item.link}
-      <p><a href={item.link}><b>Game Link</b></a></p>
+      <p><a href={item.link} target="_blank" rel="noopener noreferrer"><b>Game Link</b></a></p>
     {/if}
     </div>
   
@@ -91,7 +92,7 @@
   {/if}
 </div>
 
-<a href="/#gallery" class="back-arrow" aria-label="Return to homepage">
+<a href="{base}/" class="back-arrow" aria-label="Return to homepage">
   <span class="arrow">←</span> Back to Gallery
 </a>
 
@@ -263,8 +264,8 @@
 
 
   .back-arrow {
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    align-items: left;
     margin: 1rem 0 2rem 5rem;
     font-family: var(--font-family-paragraph);
     text-decoration: none;

@@ -62,13 +62,13 @@
       <div class="specific-item">
   
         <div class="image">
-          <a href={`/projects/${item.id}`}>
+          <a href={`${base}/projects/${item.id}`}>
             <img src={item.image} alt={item.title}>
         </a>
         </div>
   
         <div class="content">
-          <a href={`/projects/${item.id}`}>
+          <a href={`${base}/projects/${item.id}`}>
           <h3 class="item-heading">{item.title}</h3>
           </a>
           <p>

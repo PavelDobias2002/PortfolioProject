@@ -1,6 +1,11 @@
+<script>
+    import { base } from '$app/paths';
+</script>
+
+
 <nav class="nav">
     <ul>
-        <li><a href="/" data-text="Home">Home</a></li>
+        <li><a href="{base}/" data-text="Home">Home</a></li>
         <li> | Be kind to each other</li>
         
     </ul>

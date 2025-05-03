@@ -1,11 +1,12 @@
 <script>
     // Import components
     import { Header, Navigation, Footer } from "$lib";
+    import { base } from '$app/paths';
 </script>
 
 
 <!-- Link to global styles -->
-<link rel="stylesheet" href="/styles/global.css" />
+<link rel="stylesheet" href="{base}/styles/global.css" />
 
 <!-- Header -->
 <Header />

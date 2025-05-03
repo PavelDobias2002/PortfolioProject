@@ -2,13 +2,12 @@
   import { onMount } from 'svelte';
   import { scale } from 'svelte/transition';
   import Gallery from '$lib/components/Gallery.svelte';
+  import { base } from '$app/paths';
+
 
   onMount(() => {
     console.log("Home Page Loaded");
   });
-
-  // import base to prefix local paths
-  import { base } from '$app/paths';
 
   let showGallery = false;
 
@@ -30,7 +29,7 @@
 <div class="section-header">
         
   <div class="logo">
-      <img src="/logoRed-Black.png" alt="Logo" />
+      <img src="{base}/logoRed-Black.png" alt="Logo" />
   </div>
 
   <h1>Welcome to my portfolio gallery</h1>
@@ -39,9 +38,9 @@
 </div>
 
 <ul>
-  <li><a href="/CV"><img src="/cvredbrightsmaller.png" alt="CVicon" /></a></li>
-  <li><a href="https://github.com/PavelDobias2002"><img src="/gitredbrightsmall.png" alt="GitHubIcon" /></a></li>
-  <li><a href="https://www.linkedin.com/in/pavel-dobias-789060292/"><img src="/linkedinredbrightsmall.png" alt="LinkedInIcon" /></a></li>
+  <li><a href="{base}/CV"><img src="{base}/cvredbrightsmaller.png" alt="CVicon" /></a></li>
+  <li><a href="https://github.com/PavelDobias2002" target="_blank" rel="noopener noreferrer"><img src="{base}/gitredbrightsmall.png" alt="GitHubIcon" /></a></li>
+  <li><a href="https://www.linkedin.com/in/pavel-dobias-789060292/" target="_blank" rel="noopener noreferrer"><img src="{base}/linkedinredbrightsmall.png" alt="LinkedInIcon" /></a></li>
 </ul>
 
 <!-- Scroll indicator arrow -->
