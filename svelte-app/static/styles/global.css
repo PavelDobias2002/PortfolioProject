@@ -1,7 +1,6 @@
 /* ==============================
    Global Styles with CSS Variables
    ============================== */
-
    :root {
     /* Color Variables */
     --primary-color: #660000ff;
@@ -9,9 +8,6 @@
     --background-color: #F0EAD6;
     --text-color: #1a1a1a;
     --link-hover-color: #cf0011;
-    --artwork-color: blue;
-    --design-color: green;
-    --projects-color: purple;
 
     /* Font Variables */
 
@@ -45,7 +41,7 @@
    Base Styles
    ============================== */
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-family-paragraph);
     font-size: var(--font-size-base);
     background-color: var(--background-color);
     color: var(--text-color);
