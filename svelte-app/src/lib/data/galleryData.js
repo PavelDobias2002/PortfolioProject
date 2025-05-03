@@ -3,7 +3,7 @@
 
 export const allItems = [
     {
-      id: '1',
+      id: `${base}1`,
       image: `${base}/turnaround-bluestripes.jpg`,
       title: 'Blue Stripes Project',
       content: 'A blue stripe commando inspired by The Witcher.',
@@ -13,7 +13,7 @@ export const allItems = [
       description: 'This is a Blue Stripes project in which I made a turnaround.'
     },
     {
-      id: '2',
+      id: `${base}2`,
       image: `${base}/ufoAnim.gif`,
       image2: `${base}/abductee.png`,
       image3: `${base}/ufo.png`,
@@ -25,7 +25,7 @@ export const allItems = [
       description: 'Who says there were no Ufos at middle ages? Well lets say there were and here is one abducting a priest, thinking that he is going to heaven.'
     },
     {
-      id: '3',
+      id: `${base}3`,
       image: `${base}/sob-final.jpg`,
       image2: `${base}/sob-nocolor.jpg`,
       image3: `${base}/sob-onlymarker.jpg`,
@@ -38,7 +38,7 @@ export const allItems = [
       description: 'I have always loved John Blanche artwork, and when I started working with markers I decided starting with his iconic art style is the way.'
     },
     {
-      id: '4',
+      id: `${base}4`,
       image: `${base}/pavel-dobias-spritesheet-sleepingwiththefishes.jpg`,
       title: 'Sleeping with The fishes',
       content: 'A GGJ25 game created in Unity',
@@ -46,6 +46,6 @@ export const allItems = [
       style: 'Game Development',
       date: '10/02/25',
       description: 'A Global Game Jam game created in Unity, to learn more about this game visit the game link',
-      link: 'https://github.com/PavelDobias2002/Sleeping-with-the-Fishes'
+      link: `${base}https://github.com/PavelDobias2002/Sleeping-with-the-Fishes`
     }
   ];

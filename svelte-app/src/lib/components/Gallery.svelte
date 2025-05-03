@@ -63,7 +63,7 @@
   
         <div class="image">
           <a href={`/projects/${item.id}`}>
-            <img  src={item.image} alt={item.title}>
+            <img src={item.image} alt={item.title}>
         </a>
         </div>
   
