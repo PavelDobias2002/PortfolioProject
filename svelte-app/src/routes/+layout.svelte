@@ -30,14 +30,4 @@
     }
     
 
-    .image{
-    height: 15em;
-      background-color: #dddddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #546e7a;
-      font-size: 1.2rem;
-    }
-
 </style>
