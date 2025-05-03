@@ -44,7 +44,7 @@
     >Game Design</button>
   </div>
 
-<div class="gallery">
+<div id="gallery">
 
     {#if items.length === 0}
       <div class="no-items-message">
@@ -57,7 +57,7 @@
   
         <div class="image">
           <a href={`/projects/${item.id}`}>
-            <img  src={item.image} alt = "image">
+            <img  src={item.image} alt={item.title}>
         </a>
         </div>
   
@@ -122,14 +122,14 @@
   color: var(--primary-color);
 }
 
-  .gallery /* Flexbox for Dynamic Layout */
+  #gallery /* Flexbox for Dynamic Layout */
   {
     display: flex;
     flex-wrap: wrap;
   
     gap: 1.5rem;
     justify-content: center;
-    margin-top: 2rem;
+    margin: 2rem 2rem;
     
   }
 
@@ -145,14 +145,21 @@
 }
 
 
+.image {
+    overflow: hidden;
+    padding: 1rem 1rem 0 1rem;
+  }
+  
 .image img{
     display: inline-block;
     border: 2px solid rgba(62, 62, 62, 0.3);
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     max-width: 50rem;
-    margin: 1rem 1rem 0 1rem;
+    width: auto;
+    height: auto;
   }
+
 .content h3{
   font-family: var(--font-family-heading);
   font-size: 2.5rem;
@@ -164,6 +171,7 @@
   text-align: left;
   margin-left: 1rem;
   margin-right: 1rem;
+  color: var(--text-color);
 }
 
 .info{
@@ -175,4 +183,83 @@
   padding: 1rem;
   font-family: var(--font-family-paragraph);
 }
+
+/* Responsive styles for tablet */
+@media (max-width: 992px) {
+    #gallery {
+      margin: 2rem 1rem;
+    }
+    
+    .specific-item {
+      width: 85%;
+    }
+    
+    .image img {
+      max-width: 100%;
+    }
+    
+    .content h3 {
+      font-size: 2rem;
+    }
+  }
+
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    .category-filters {
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+    
+    #gallery {
+      margin: 1.5rem 0.5rem;
+    }
+    
+    .specific-item {
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .image {
+      padding: 0.8rem 0.8rem 0 0.8rem;
+    }
+    
+    .content h3 {
+      font-size: 1.8rem;
+    }
+    
+    .content {
+      font-size: 1.2rem;
+    }
+    
+    .info {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  /* Small mobile styles */
+  @media (max-width: 480px) {
+    .category-filters button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+    
+    .content h3 {
+      font-size: 1.5rem;
+    }
+
+    .image {
+      padding: 0.5rem 0.5rem 0 0.5rem;
+    }
+    
+    .content {
+      font-size: 1rem;
+    }
+    
+    .info {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   </style>

@@ -1,6 +1,5 @@
 <script>
   import { onMount } from 'svelte';
-  import { Card } from '$lib';
   import { scale } from 'svelte/transition';
   import Gallery from '$lib/components/Gallery.svelte';
 
@@ -91,7 +90,10 @@
   }
   
   .logo img {
-    transition: transform 0.3s ease;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, width 0.3s ease;
   }
   
   .logo img:hover {
@@ -157,5 +159,77 @@
     font-family: var(--font-family-paragraph);
   }
   
+
+  /* Responsive styles for tablets */
+  @media (max-width: 992px) {
+    .section-header h1 {
+      font-size: 2rem;
+    }
+
+    .section-header p {
+      font-size: 1.3rem;
+    }
+
+    .logo img {
+      max-width: 75%;
+    }
+
+    .scroll-arrow {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    .section-header h1 {
+      font-size: 1.6rem;
+      padding: 0 1rem;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      padding: 0 1rem;
+    }
+
+    .logo img {
+      max-width: 75%;
+    }
+
+    ul li {
+      margin: 0 10px;
+    }
+
+    .scroll-arrow-container {
+      margin-bottom: 8rem;
+    }
+
+    .scroll-arrow {
+      font-size: 1.2rem;
+    }
+  }
+
+  /* Extra small screens */
+  @media (max-width: 480px) {
+    .section-header h1 {
+      font-size: 1.4rem;
+    }
+
+    .section-header p {
+      font-size: 1rem;
+    }
+
+    .logo img {
+      max-width: 180px;
+    }
+
+    ul {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    ul li {
+      margin: 0 8px;
+    }
+  }
 
 </style>

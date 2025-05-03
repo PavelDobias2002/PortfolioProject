@@ -1,6 +1,6 @@
 <script>
     // Import components
-    import { Header, Navigation, Footer, Card } from "$lib";
+    import { Header, Navigation, Footer } from "$lib";
 </script>
 
 
