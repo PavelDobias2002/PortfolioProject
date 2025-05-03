@@ -39,9 +39,9 @@
 </div>
 
 <ul>
-  <li><a href="https://github.com/PavelDobias2002"><img src="/cvredbrightsmaller.png" alt="CVicon" /></a></li>
+  <li><a href="/CV"><img src="/cvredbrightsmaller.png" alt="CVicon" /></a></li>
   <li><a href="https://github.com/PavelDobias2002"><img src="/gitredbrightsmall.png" alt="GitHubIcon" /></a></li>
-  <li><a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://ie.linkedin.com/in/pavel-dobias-789060292&ved=2ahUKEwjy_8-tl4KMAxWHUUEAHQNCAtoQFnoECBYQAQ&usg=AOvVaw06-nsywOiiTPqT1gHErbOe"><img src="/linkedinredbrightsmall.png" alt="LinkedInIcon" /></a></li>
+  <li><a href="https://www.linkedin.com/in/pavel-dobias-789060292/"><img src="/linkedinredbrightsmall.png" alt="LinkedInIcon" /></a></li>
 </ul>
 
 <!-- Scroll indicator arrow -->
@@ -152,12 +152,25 @@
     align-items: center;
     font-size: 1.5rem;
     color: var(--primary-color);
+    animation: bounce 2s infinite;
   }
   
   .scroll-arrow span {
     margin-bottom: 0.5rem;
     font-family: var(--font-family-paragraph);
   }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-2.5px);
+    }
+}
   
 
   /* Responsive styles for tablets */

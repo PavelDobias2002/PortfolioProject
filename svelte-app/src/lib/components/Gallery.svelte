@@ -31,17 +31,23 @@
       on:click={() => filterByCategory('All')}
     >All</button>
     <button 
+      class={activeCategory === 'Game Development' ? 'active' : ''} 
+      on:click={() => filterByCategory('Game Development')}
+    >Game Development</button>
+    <button 
       class={activeCategory === 'Digital Art' ? 'active' : ''} 
       on:click={() => filterByCategory('Digital Art')}
     >Digital Art</button>
     <button 
+      class={activeCategory === 'Animation' ? 'active' : ''} 
+      on:click={() => filterByCategory('Animation')}
+    >Animation</button>
+    <button 
       class={activeCategory === 'Traditional Art' ? 'active' : ''} 
       on:click={() => filterByCategory('Traditional Art')}
     >Traditional Art</button>
-    <button 
-      class={activeCategory === 'Game Design' ? 'active' : ''} 
-      on:click={() => filterByCategory('Game Design')}
-    >Game Design</button>
+    
+    
   </div>
 
 <div id="gallery">
@@ -62,14 +68,16 @@
         </div>
   
         <div class="content">
+          <a href={`/projects/${item.id}`}>
           <h3 class="item-heading">{item.title}</h3>
+          </a>
           <p>
             {item.content}
           </p>
         </div>
   
         <div class="info">
-          <p><b>Software:</b> {item.software}</p>
+          <p><b>Software/Tools:</b> {item.software}</p>
           <p><b>Style:</b> {item.style}</p>
           <p><b>Date:</b> {item.date}</p>
         </div>
@@ -130,6 +138,7 @@
     gap: 1.5rem;
     justify-content: center;
     margin: 2rem 2rem;
+    margin-bottom: 5rem;
     
   }
 
@@ -182,6 +191,7 @@
   border-top: 2px solid rgba(62, 62, 62, 0.3);
   padding: 1rem;
   font-family: var(--font-family-paragraph);
+
 }
 
 /* Responsive styles for tablet */

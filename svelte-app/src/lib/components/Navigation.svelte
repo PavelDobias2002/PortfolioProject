@@ -1,6 +1,7 @@
 <nav class="nav">
     <ul>
         <li><a href="/" data-text="Home">Home</a></li>
+        <li> | Be kind to each other</li>
         
     </ul>
 </nav>
@@ -21,6 +22,11 @@
 
     nav ul li {
         margin: 0 15px;
+        font-family: var(--font-family-heading);
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-style: bold;
+        color: white;
     }
     
     nav ul li a {
