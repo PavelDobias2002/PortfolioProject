@@ -8,8 +8,8 @@
   onMount(() => {
     console.log("Home Page Loaded");
   });
-
-  let showGallery = false;
+//
+  let showGallery = true;
 
   // Update showGallery based on scroll position
   const handleScroll = () => {
@@ -51,11 +51,11 @@
   </div>
 </div>
 
-{#if showGallery}
-<div class="reveal">
+
+
   <Gallery />
-</div>
-{/if}
+
+
 
 <style>
 
