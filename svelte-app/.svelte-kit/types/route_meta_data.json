@@ -1,0 +1,13 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/CV": [
+		"src/routes/+layout.js"
+	],
+	"/projects/[id]": [
+		"src/routes/projects/[id]/+page.server.js",
+		"src/routes/+layout.js"
+	]
+}
