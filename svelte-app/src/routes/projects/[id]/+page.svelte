@@ -67,7 +67,7 @@
       {/if}
     </div>
     <div class="content">
-    <p class="description">{item.content}<br><br><b>Description: </b>{item.description}</p>
+    <p class="description">{item.content}<br><br><b>Description: </b> {item.description}</p>
     
     
     {#if item.software}

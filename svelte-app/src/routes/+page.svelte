@@ -33,15 +33,20 @@
   </div>
 
   <h1>Welcome to my portfolio gallery</h1>
-  <p>My name is <b>Pavel Dobias</b>, I am an artist, designer, game designer/developer and much more.<br> To learn more check out my <b>contacts:</b></p>
+  <p>My name is <b>Pavel Dobias</b>, I am an artist, designer, game designer/developer looking to learn new things.<br> And to learn more about me check out my <b>contacts:</b><br>
+    <b>Email:</b> dobias.parez@gmail.com <br> <b>Phone:</b> +420 724 259 929/+353 87 487 8524
+  </p>
   
 </div>
 
 <ul>
   <li><a href="{base}/CV"><img src="{base}/cvredbrightsmaller.png" alt="CVicon" /></a></li>
-  <li><a href="https://github.com/PavelDobias2002" target="_blank" rel="noopener noreferrer"><img src="{base}/gitredbrightsmall.png" alt="GitHubIcon" /></a></li>
-  <li><a href="https://www.linkedin.com/in/pavel-dobias-789060292/" target="_blank" rel="noopener noreferrer"><img src="{base}/linkedinredbrightsmall.png" alt="LinkedInIcon" /></a></li>
+  <li><a href="https://github.com/PavelDobias2002" target="_blank" rel="noopener noreferrer"><img src="{base}/github-logo-logo.webp" alt="GitHubIcon" /></a></li>
+  <li><a href="https://www.linkedin.com/in/pavel-dobias-789060292/" target="_blank" rel="noopener noreferrer"><img src="{base}/LinkedInLogo.webp" alt="LinkedInIcon" /></a></li>
+  <li><a href="https://codeberg.org/PavelDobias" target="_blank" rel="noopener noreferrer"><img src="{base}/codeberglogo.webp" alt="CodebergIcon" /></a></li>
 </ul>
+
+
 
 <!-- Scroll indicator arrow -->
 <div class="scroll-arrow-container">
@@ -99,6 +104,13 @@
     transform: translateY(-10px);
   }
 
+  ul img{
+    display: inline-block;
+    max-width: 5rem;
+    width: 100%;
+    height: auto;
+  }
+
   ul {
         list-style: none;
         padding: 0;
@@ -141,7 +153,7 @@
     display: flex;
     justify-content: center;
     margin-top: 2rem;
-    margin-bottom: 12.5rem;
+    margin-bottom: 5rem;
     width: 100%;
   }
   
