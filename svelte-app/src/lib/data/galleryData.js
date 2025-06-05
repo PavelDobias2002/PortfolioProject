@@ -27,7 +27,7 @@ export const allItems = [
     },
     {
       id: '3',
-      image: `${base}/pavel-dobias-spritesheet-sleepingwiththefishes.jpg`,
+      image: `${base}/pavel-dobias-spritesheet-sleepingwiththefishes.webp`,
       title: 'Sleeping with The fishes',
       content: 'A GGJ25 game created in Unity',
       software: 'Adobe Photoshop/Unity',
@@ -39,7 +39,7 @@ export const allItems = [
     {
       id: '4',
       image: `${base}/ufoAnim.gif`,
-      image2: `${base}/abductee.png`,
+      image2: `${base}/abductee.webp`,
       image3: `${base}/ufo.png`,
       title: 'Ufo Project',
       content: 'A project about medieval Ufo abducting a priest',
@@ -50,10 +50,10 @@ export const allItems = [
     },
     {
       id: '5',
-      image: `${base}/sob-final.jpg`,
-      image2: `${base}/sob-nocolor.jpg`,
-      image3: `${base}/sob-onlymarker.jpg`,
-      image4: `${base}/sob-pencil.jpg`,
+      image: `${base}/sob-final.webp`,
+      image2: `${base}/sob-nocolor.webp`,
+      image3: `${base}/sob-onlymarker.webp`,
+      image4: `${base}/sob-pencil.webp`,
       title: 'Sister of Battle',
       content: 'Pencil and marker artwork inspired by John Blanche',
       software: 'Marker and Pencil',
@@ -63,7 +63,7 @@ export const allItems = [
     },
     {
       id: '6',
-      image: `${base}/turnaround-bluestripes.jpg`,
+      image: `${base}/turnaround-bluestripes.webp`,
       title: 'Blue Stripes Project',
       content: 'A blue stripe commando inspired by The Witcher.',
       software: 'Adobe Photoshop, Animate, After Effects',
