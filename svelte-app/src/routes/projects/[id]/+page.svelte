@@ -16,7 +16,7 @@
   
   // Get all available images for the item
   $: images = item ? 
-      [item.image, item.image2, item.image3, item.image4, item.image5]
+      [item.image, item.image2, item.image3, item.image4, item.image5, item.image6]
       .filter(img => img) : []; // Filter out undefined/null images
   
   // Navigation functions
@@ -80,7 +80,7 @@
       <p><b>Date:</b> {item.date}</p>
     {/if}
     {#if item.link}
-      <p><a href={item.link} target="_blank" rel="noopener noreferrer"><b>Game Link</b></a></p>
+      <p><a href={item.link} target="_blank" rel="noopener noreferrer"><b>Link</b></a></p>
     {/if}
     </div>
   

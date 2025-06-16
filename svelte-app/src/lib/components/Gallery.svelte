@@ -35,6 +35,10 @@
       on:click={() => filterByCategory('Game Development')}
     >Game Development</button>
     <button 
+      class={activeCategory === 'Game Design' ? 'active' : ''} 
+      on:click={() => filterByCategory('Game Design')}
+    >Game Design</button>
+    <button 
       class={activeCategory === 'Digital Art' ? 'active' : ''} 
       on:click={() => filterByCategory('Digital Art')}
     >Digital Art</button>
@@ -134,10 +138,14 @@
   {
     display: flex;
     flex-wrap: wrap;
+
+
   
     gap: 1.5rem;
     justify-content: center;
-    margin: 2rem 2rem;
+    margin-top: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
     margin-bottom: 5rem;
     
   }
