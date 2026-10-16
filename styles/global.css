@@ -3,7 +3,7 @@
    ============================== */
    :root {
     /* Color Variables */
-    --primary-color: #660000ff;
+    --primary-color: rgb(19, 83, 0);
     --secondary-color: #000000ff;
     --background-color: #F0EAD6;
     --text-color: #1a1a1a;
