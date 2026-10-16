@@ -35,9 +35,9 @@
       on:click={() => filterByCategory('Game Development')}
     >Game Development</button>
     <button 
-      class={activeCategory === 'Game Design' ? 'active' : ''} 
-      on:click={() => filterByCategory('Game Design')}
-    >Game Design</button>
+      class={activeCategory === 'Design' ? 'active' : ''} 
+      on:click={() => filterByCategory('Design')}
+    >Design</button>
     <button 
       class={activeCategory === 'Digital Art' ? 'active' : ''} 
       on:click={() => filterByCategory('Digital Art')}
