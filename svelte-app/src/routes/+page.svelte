@@ -10,12 +10,12 @@
     </div> -->
 
     <h1>Pavel Dobias</h1>
-    <p class="intro">Artist, designer, and game designer/developer looking to learn new things.</p>
+    <p class="intro">Artist, designer, game designer looking for opportunities.</p>
 
     <div class="contact-details">
       <h2>Contact</h2>
-      <p><b>Email</b><br /><a href="mailto:dobias.parez@gmail.com">dobias.parez@gmail.com</a></p>
-      <p><b>Phone</b><br /><a href="tel:+420724259929">+420 724 259 929</a><br /><a href="tel:+353874878524">+353 87 487 8524</a></p>
+      <p><b>Email</b><br /><a href="mailto:dobias.parez@proton.me">dobias.parez@proton.me</a></p>
+      <p><b>Phone</b><br /><a href="tel:+420724259929">+420 724 259 929</a></p>
     </div>
 
     <nav aria-label="Profile links">
@@ -56,7 +56,7 @@
     position: sticky;
     top: 2rem;
     min-width: 0;
-    height: calc(100vh - 4rem);
+    height: calc(60vh - 2rem);
     display: flex;
     flex-direction: column;
     align-items: flex-start;

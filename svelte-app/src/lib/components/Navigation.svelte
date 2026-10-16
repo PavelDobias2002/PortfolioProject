@@ -5,8 +5,8 @@
 
 <nav class="nav">
     <ul>
-        <li><a href="{base}/" data-text="Home">Home</a></li>
-        <li> | Be kind to each other</li>
+        <!-- <li><a href="{base}/" data-text="Home">Home</a></li>
+        <li> | Be kind to each other</li> -->
         
     </ul>
 </nav>
