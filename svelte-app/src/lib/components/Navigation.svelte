@@ -42,4 +42,15 @@
         color: white;
     }
 
+    @media (max-width: 480px) {
+        nav ul li,
+        nav ul li a {
+            font-size: 1rem;
+        }
+
+        nav ul li {
+            margin: 0 0.5rem;
+        }
+    }
+
 </style>

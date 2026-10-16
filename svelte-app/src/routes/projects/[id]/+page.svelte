@@ -45,7 +45,7 @@
           <img 
             transition:fade={{ duration: 300 }}
             class="carousel-image" 
-            src="{base}{images[currentImageIndex]}"
+            src="{images[currentImageIndex]}"
             alt={`${item.title} - Image ${currentImageIndex + 1}`} 
           />
           
@@ -110,8 +110,8 @@
   .carousel {
     grid-area: 2 / 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
     position: relative;
     width: 100%;
     overflow: hidden;

@@ -67,7 +67,7 @@
   
         <div class="image">
           <a href={`${base}/projects/${item.id}`}>
-            <img src="{base}{item.image}" alt="{item.title}">
+            <img src={item.image} alt={item.title}>
         </a>
         </div>
   
@@ -136,22 +136,19 @@
 
   #gallery /* Flexbox for Dynamic Layout */
   {
-    display: flex;
-    flex-wrap: wrap;
-
-
-  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
     gap: 1.5rem;
-    justify-content: center;
     margin-top: 2rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 5rem;
-    
   }
 
   .specific-item
 { /*grid system for the news articles*/
+    min-width: 0;
+    width: 100%;
     display: grid;
     grid-template-columns: 2fr;
     gap: 1rem;
@@ -168,12 +165,12 @@
   }
   
 .image img{
-    display: inline-block;
+  display: block;
     border: 2px solid rgba(62, 62, 62, 0.3);
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    max-width: 50rem;
-    width: auto;
+    max-width: 100%;
+    width: 100%;
     height: auto;
   }
 
